@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Task_1708.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Product Details</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PQty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ManDate)
+        </th>
+        <th>Action</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PQty)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ManDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PId })
+        </td>
+    </tr>
+}
+</table>
