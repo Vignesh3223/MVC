@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Task_2108.Models.Company>
+
+@{
+    ViewBag.Title = "Company Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1 class="text-center">Company Info</h1>
+<hr />
+
+@foreach (var item in Model)
+{
+    <h1 class="text-start ms-5">
+        @Html.DisplayFor(modelItem => item.CompanyName)
+    </h1>
+    <h4 class="text-start ms-5">
+        Description : @Html.DisplayFor(modelItem => item.CompanyDescription)
+    </h4>
+    <br/><br/>
+         <div>
+             <h2>Contact Details</h2>
+             <h4 class="text-start ms-5">
+                 Phone : @Html.DisplayFor(modelItem => item.CompanyPhone)
+                 <br /><br />
+                 Email : @Html.DisplayFor(modelItem => item.CompanyEmail)
+                 <br /><br />
+             </h4>
+         </div>
+         <div>
+             <h2>Company Address</h2>
+             <h4 class="text-start ms-5">
+                 Address :  @Html.DisplayFor(modelItem => item.CompanyAddress)
+             </h4>
+         </div>
+       
+
+}

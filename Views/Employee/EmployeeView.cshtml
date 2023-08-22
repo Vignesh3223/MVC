@@ -1,0 +1,43 @@
+﻿@model  Task_2108.ViewModel.Employee
+@{
+    ViewBag.Title = "EmployeeView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-center">Employee Details</h1>
+<table class="table table-bordered table-hover">
+    <tr style="background-color:black;color:white">
+        <th>
+            Trainee ID
+        </th>
+        <th>
+            Trainee Name
+        </th>
+        <th>
+            Trainer Name
+        </th>
+        <th>
+            Trainee Domain
+        </th>
+        <th>
+            Trainer Experience
+        </th>
+    </tr>
+    <tr>
+        <td>
+            @Model.Trainees.Tid
+        </td>
+        <td>
+            @Model.Trainees.Tname
+        </td>
+        <td>
+            @Model.Trainers.TrName
+        </td>
+        <td>
+            @Model.Trainees.TDomain
+        </td>
+        <td>
+            @Model.Trainers.TrExperience
+        </td>
+    </tr>
+    </table>

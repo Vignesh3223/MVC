@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <header class="fixed-top">
+        <h1 style="text-align:center">Company Details</h1>
+    </header>
+    @{ 
+        Html.RenderAction("RenderSideBar");
+    }
+    <div class="container-fluid content">
+        @RenderBody()
+    </div>
+    <footer class="fixed-bottom">
+        <h4>CG-VAK Software & Exports Pvt.Ltd</h4>
+        <div style="background-color:black;color:white;">@RenderSection("Footer", false)</div>
+    </footer>
+    <style>
+        header{
+            height:100px;
+            width:100%;
+            padding-top:20px;
+            background-color:darkgrey;
+            margin-top:-60px;
+        }
+        .content{
+            margin-left:150px;
+            background-color:whitesmoke;
+            margin-top:15px;
+        }
+        footer {
+            height: 100px;
+            width: 100%;
+            background-color: darkgrey;
+            padding-top:10px;
+            color:black;
+            font:Times new roman;
+            padding-left:150px;
+        }
+    </style>
+</body>
+</html>

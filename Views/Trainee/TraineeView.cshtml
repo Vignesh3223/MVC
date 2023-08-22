@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Task_2108.Models.Trainee>
+
+@{
+    ViewBag.Title = "TraineeView";
+    Layout = "~/Views/Shared/View1.cshtml";
+}
+
+<h1 class="text-center">Trainee Details</h1>
+
+<table class="table table-bordered table-hover">
+    <tr style="background-color:black;color:white">
+        <th>
+            @Html.DisplayNameFor(model => model.Tid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TDomain)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TrName)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TDomain)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrName)
+            </td>
+        </tr>
+    }
+
+</table>
+<style>
+    table {
+        background-color: lightgray;
+        color: navy;
+    }
+</style>

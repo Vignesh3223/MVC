@@ -1,0 +1,22 @@
+﻿<nav>
+    <ul class="navbar-nav">
+        <li>@Html.ActionLink("Home", "Index", "Company")</li>
+        <li>@Html.ActionLink("Trainer", "TrainerView", "Trainer")</li>
+        <li>@Html.ActionLink("Trainee", "TraineeView", "Trainee")</li>
+        <li>@Html.ActionLink("Employee", "EmployeeView", "Employee")</li>
+    </ul>
+</nav>
+<style>
+    .navbar-nav{
+        width:150px;
+        height:90vh;
+        background-color:darkgrey;
+        float:left;
+        list-style-type:none;
+        line-height:2;
+        font-size:20px;
+        font-weight:bold;
+        color:black;
+        margin-left:-10px;
+    }
+</style>
