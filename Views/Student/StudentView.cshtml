@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Task_2208.Models.Student>
+
+@{
+    ViewBag.Title = "StudentView";
+}
+
+<h2 class="text-center">Student Details</h2>
+
+<table class="table table-bordered table-hover">
+    <tr style="background-color:gainsboro;color:red">
+        <th>
+            @Html.DisplayNameFor(model => model.SId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Department)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Department)
+        </td>
+    </tr>
+}
+
+</table>
