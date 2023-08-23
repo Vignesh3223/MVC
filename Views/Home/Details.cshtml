@@ -1,0 +1,59 @@
+﻿@model Task_2308.Models.Trainee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details - Trainee Information</h2>
+
+<div>
+    <h4>Trainee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tcity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tcity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.deptid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.deptid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.domain)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.domain)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.tid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
