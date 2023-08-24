@@ -82,5 +82,11 @@ namespace Task_2308.Controllers
 
             return View();
         }
+
+        [MyException]
+        public ActionResult View1()
+        {
+            return View();
+        }
     }
 }

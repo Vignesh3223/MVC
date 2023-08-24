@@ -18,4 +18,16 @@ namespace Task_2308
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }
+    public class MyException : HandleErrorAttribute
+    {
+        public override void OnException(ExceptionContext filterContext)
+        {
+            Exception e = filterContext.Exception;
+            filterContext.ExceptionHandled = true;
+            filterContext.Result = new ViewResult()
+            {
+                ViewName = "Error1",
+            };
+        }
+    }
 }
