@@ -24,7 +24,7 @@ namespace Task_2308.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "tid,tname,tcity,deptid,domain")] Trainee trainee)
+        public ActionResult Create([Bind(Include = "tname,tcity,deptid,domain")] Trainee trainee)
         {
             if(ModelState.IsValid)
             {
@@ -50,7 +50,7 @@ namespace Task_2308.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "tid,tname,tcity,deptid,domain")]Trainee trainee)
+        public ActionResult Edit([Bind(Include = "tname,tcity,deptid,domain")]Trainee trainee)
         {
             if(ModelState.IsValid)
             {
